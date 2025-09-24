@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Ramen Yard Custom Styles */
-/* Minimal helpers for ramen palette when needed outside tailwind tokens */
-.bg-ramen-cream { background-color: #FFF3E0; }
-.bg-ramen-beige { background-color: #F7E7CE; }
-.text-ramen-red { color: #D7263D; }
-.text-ramen-dark { color: #0B0A0A; }
-.border-ramen-sesame { border-color: #D1C7B7; }
-.ring-ramen-gold { --tw-ring-color: #E0A106; }
+/* R3publika Chicken Inasal Custom Styles */
+/* Minimal helpers for chicken inasal palette when needed outside tailwind tokens */
+.bg-chicken-cream { background-color: #F5F5DC; }
+.bg-chicken-beige { background-color: #F5E6D3; }
+.text-chicken-orange { color: #FF6B35; }
+.text-chicken-dark { color: #000000; }
+.border-chicken-sesame { border-color: #D2B48C; }
+.ring-chicken-gold { --tw-ring-color: #FF8C00; }
 
 /* Hide scrollbar for mobile nav */
 .scrollbar-hide {
@@ -36,3 +36,133 @@ img {
   width: 1px;
   height: 1px;
 }
+
+/* Smooth scrolling for in-page anchors */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Extra animations/utilities */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 8px 24px rgba(255, 107, 53, 0.0), 0 0 0 rgba(255, 107, 53, 0.0); }
+  50% { box-shadow: 0 10px 28px rgba(255, 107, 53, 0.35), 0 0 12px rgba(255, 107, 53, 0.25); }
+}
+.glow-pulse {
+  animation: glowPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes spinSlow {
+  to { transform: rotate(360deg); }
+}
+.spin-slow {
+  animation: spinSlow 6s linear infinite;
+}
+
+.conic-ring {
+  background: conic-gradient(
+    from 0deg,
+    rgba(255,107,53,0.0) 0deg,
+    rgba(255,107,53,0.35) 60deg,
+    rgba(255,140,0,0.45) 120deg,
+    rgba(255,107,53,0.35) 180deg,
+    rgba(255,140,0,0.45) 240deg,
+    rgba(255,107,53,0.35) 300deg,
+    rgba(255,107,53,0.0) 360deg
+  );
+}
+
+/* From Uiverse.io by doniaskima (adapted to beige/orange) */
+.btn-17,
+.btn-17 *,
+.btn-17 :after,
+.btn-17 :before,
+.btn-17:after,
+.btn-17:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-17 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #F5E6D3; /* beige */
+  background-image: none;
+  color: #FF6B35; /* orange text */
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 800;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.btn-17:disabled { cursor: default; }
+.btn-17:-moz-focusring { outline: auto; }
+.btn-17 svg { display: block; vertical-align: middle; }
+.btn-17 [hidden] { display: none; }
+
+.btn-17 {
+  border-radius: 99rem;
+  border-width: 2px;
+  border-color: #FF6B35; /* orange border */
+  padding: 0.8rem 3rem;
+  z-index: 0;
+}
+
+.btn-17,
+.btn-17 .text-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-17 .text-container { display: block; }
+.btn-17 .text { display: block; position: relative; }
+
+.btn-17:hover .text {
+  -webkit-animation: move-up-alternate 0.3s forwards;
+  animation: move-up-alternate 0.3s forwards;
+}
+
+@-webkit-keyframes move-up-alternate {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(80%); }
+  51% { transform: translateY(-80%); }
+  to { transform: translateY(0); }
+}
+@keyframes move-up-alternate {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(80%); }
+  51% { transform: translateY(-80%); }
+  to { transform: translateY(0); }
+}
+
+.btn-17:after,
+.btn-17:before {
+  --skew: 0.2;
+  background: rgba(255,107,53,0.18); /* orange sweep */
+  content: "";
+  display: block;
+  height: 102%;
+  left: calc(-50% - 50% * var(--skew));
+  pointer-events: none;
+  position: absolute;
+  top: -104%;
+  transform: skew(calc(150deg * var(--skew))) translateY(var(--progress, 0));
+  transition: transform 0.2s ease;
+  width: 100%;
+}
+
+.btn-17:after {
+  --progress: 0%;
+  left: calc(50% + 50% * var(--skew));
+  top: 102%;
+  z-index: -1;
+}
+
+.btn-17:hover:before { --progress: 100%; }
+.btn-17:hover:after { --progress: -102%; }

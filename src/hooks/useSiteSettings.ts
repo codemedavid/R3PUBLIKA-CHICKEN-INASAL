@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase';
-import { SiteSettings, SiteSetting } from '../types';
+import { SiteSettings } from '../types';
 
 export const useSiteSettings = () => {
   const [siteSettings, setSiteSettings] = useState<SiteSettings | null>(null);
@@ -21,8 +21,8 @@ export const useSiteSettings = () => {
 
       // Transform the data into a more usable format
       const settings: SiteSettings = {
-        site_name: data.find(s => s.id === 'site_name')?.value || 'Beracah Cafe',
-        site_logo: data.find(s => s.id === 'site_logo')?.value || '',
+        site_name: data.find(s => s.id === 'site_name')?.value || 'R3publika Chicken Inasal',
+        site_logo: data.find(s => s.id === 'site_logo')?.value || '/logo.jpg',
         site_description: data.find(s => s.id === 'site_description')?.value || '',
         currency: data.find(s => s.id === 'currency')?.value || 'PHP',
         currency_code: data.find(s => s.id === 'currency_code')?.value || 'PHP'

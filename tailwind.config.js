@@ -4,16 +4,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        ramen: {
-          red: '#D7263D',
-          dark: '#0B0A0A',
-          charcoal: '#111113',
-          cream: '#FFF3E0',
-          beige: '#F7E7CE',
-          gold: '#E0A106',
-          sesame: '#D1C7B7',
-          seaweed: '#1F2937',
-          kimchi: '#B81D24'
+        chicken: {
+          orange: '#FF6B35',
+          dark: '#000000',
+          charcoal: '#1A1A1A',
+          cream: '#F5F5DC',
+          beige: '#F5E6D3',
+          gold: '#FF8C00',
+          sesame: '#D2B48C',
+          seaweed: '#2F2F2F',
+          kimchi: '#FF4500'
         }
       },
       fontFamily: {

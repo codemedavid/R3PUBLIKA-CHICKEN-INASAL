@@ -204,10 +204,13 @@ export const menuData: MenuItem[] = [
 ];
 
 export const categories = [
-  { id: 'dim-sum', name: 'Dim Sum', icon: '🥟' },
-  { id: 'noodles', name: 'Noodles', icon: '🍜' },
-  { id: 'rice-dishes', name: 'Rice Dishes', icon: '🍚' },
-  { id: 'beverages', name: 'Beverages', icon: '🍵' }
+  { id: 'inasal-meals', name: 'Inasal Meals', icon: '🍗' },
+  { id: 'pancit', name: 'Pancit', icon: '🍝' },
+  { id: 'appetizers', name: 'Appetizers', icon: '🥗' },
+  { id: 'soups', name: 'Soups', icon: '🍲' },
+  { id: 'extras', name: 'Extras', icon: '➕' },
+  { id: 'drinks', name: 'Drinks', icon: '🥤' },
+  { id: 'dessert', name: 'Dessert', icon: '🍨' }
 ];
 
 export const addOnCategories = [

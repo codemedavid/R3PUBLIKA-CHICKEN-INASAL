@@ -9,6 +9,7 @@ import Checkout from './components/Checkout';
 import FloatingCartButton from './components/FloatingCartButton';
 import AdminDashboard from './components/AdminDashboard';
 import { useMenu } from './hooks/useMenu';
+import Hero from './components/Hero';
 
 function MainApp() {
   const cart = useCart();
@@ -36,7 +37,14 @@ function MainApp() {
         onCartClick={() => handleViewChange('cart')}
         onMenuClick={() => handleViewChange('menu')}
       />
-      <SubNav selectedCategory={selectedCategory} onCategoryClick={handleCategoryClick} />
+
+      {currentView === 'menu' && (
+        <>
+          <Hero />
+          <SubNav selectedCategory={selectedCategory} onCategoryClick={handleCategoryClick} />
+          <div id="menu" className="relative -top-16" />
+        </>
+      )}
       
       {currentView === 'menu' && (
         <Menu 
