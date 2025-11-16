@@ -5,7 +5,7 @@ const Hero: React.FC = () => {
     <section className="relative overflow-hidden bg-gradient-to-b from-white to-chicken-cream/60" style={{ minHeight: 'calc(100vh - 64px)' }}>
       {/* Decorative blurred orbs */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-chicken-orange/10 blur-3xl" />
+        <div className="absolute -top-24 -left-24 h-[70vh] w-72 rounded-full bg-chicken-orange/10 blur-3xl" />
         <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-chicken-gold/10 blur-3xl" />
       </div>
 
