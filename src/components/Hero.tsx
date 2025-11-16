@@ -25,12 +25,8 @@ const Hero: React.FC = () => {
         </div>
 
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-pretendard font-semibold tracking-tight text-chicken-dark mb-4 animate-fade-in">
-          R3PUBLIKA PINAKA BASKÚG NGA INASAL MEAL!
+          R3publika Pinaka Baskug nga Inasal meal!
         </h1>
-        <p className="mx-auto max-w-3xl text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed animate-slide-up">
-          R3PUBLIKA’s very own Signature Inasal and other signature dishes paired with Garlic
-          Anatto Rice Meals with Sayamni and Home Made Atchara.
-        </p>
 
         <div className="mt-8 flex items-center justify-center gap-3">
           <a href="#menu" className="btn-17 glow-pulse">
