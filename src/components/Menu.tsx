@@ -93,9 +93,9 @@ const Menu: React.FC<MenuProps> = ({ menuItems, addToCart, cartItems, updateQuan
       />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-noto font-semibold text-black mb-4">R3PUBLIKA MENU</h2>
+        <h2 className="text-4xl font-noto font-semibold text-black mb-4">OUR MENU</h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Our Menu  R3PUBLIKA proudly presents our elevated take on Signature Inasal and other standout...
+          R3PUBLIKA proudly presents our elevated take on Signature Inasal and other standout Filipino dishes, served with our richly flavored Garlic Annatto Rice.
         </p>
       </div>
 
